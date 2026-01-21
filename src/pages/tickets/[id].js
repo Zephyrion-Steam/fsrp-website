@@ -6,7 +6,7 @@ import Head from 'next/head';
 export async function getServerSideProps(context) {
   const { id } = context.params;
   const client = await clientPromise;
-  const db = client.db('test'); // Replace 'test' with your DB name if different
+  const db = client.db('FSRP-tickets'); // Replace 'test' with your DB name if different
 
   // Find the ticket by the random ID
   const ticket = await db.collection('tickets').findOne({ transcriptId: id });
